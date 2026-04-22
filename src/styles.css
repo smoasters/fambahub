@@ -1,11 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
-@import '@primer/primitives/dist/css/primitives.css';
-/* motion */
-@import '@primer/primitives/dist/css/base/motion/motion.css';
-/* theme colors */
-@import '@primer/primitives/dist/css/functional/themes/light.css';
 
 @theme inline {
   --font-heading: var(--font-sans);
