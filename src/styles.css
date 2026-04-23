@@ -80,7 +80,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.511 0.096 186.391);
+  --primary: oklch(0.2587 0.0705 257.68);
   --primary-foreground: oklch(0.984 0.014 180.72);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
@@ -135,4 +135,23 @@ body {
   font: var(--text-body-shorthand-large);
   color: var(--fgColor-default);
   background-color: var(--bgColor-default);
+}
+
+button[data-variant='primary'] {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+button[data-variant='primary']:active {
+  background-color: oklch(0.1983 0.0551 258.24) !important;
+  border-color: oklch(0.1983 0.0551 258.24) !important;
+}
+
+button[data-variant='primary']:hover {
+  background-color: oklch(0.3473 0.0874 255.14) !important;
+}
+
+button[data-variant='primary']:focus-visible {
+  outline: 2px solid var(--color-primary) !important;
+  outline-offset: 2px;
 }

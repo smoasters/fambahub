@@ -4,6 +4,7 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router';
 import { GoogleAnalytics } from 'tanstack-router-ga4';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 import appCss from '@/styles.css?url';
+import { metadata } from '@/lib/metadata';
 
 export const Route = createRootRoute({
   head: () => ({
@@ -15,10 +16,13 @@ export const Route = createRootRoute({
         name: 'viewport',
         content: 'width=device-width, initial-scale=1',
       },
-      {
-        title: 'TanStack Start Starter',
-      },
+      ...metadata({
+        title: 'FambaHub | Explore the world',
+        description:
+          'Discover places, experiences, and travel ideas across Zimbabwe and beyond. Plan, explore, and book with ease with FambaHub.',
+      }),
     ],
+
     links: [
       {
         rel: 'stylesheet',
@@ -32,6 +36,25 @@ export const Route = createRootRoute({
         rel: 'stylesheet',
         href: 'https://rsms.me/inter/inter.css',
       },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-96x96.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png',
+      },
+      { rel: 'manifest', href: '/site.webmanifest', color: '#fffff' },
+      { rel: 'icon', href: '/favicon.svg' },
     ],
   }),
   shellComponent: RootDocument,
