@@ -108,13 +108,13 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   --fontStack-sansSerif:
-    'Inter-var', 'Inter', --apple-system, system-ui, sans-serif;
+    'Inter-var', 'Inter', --apple-system, system-ui, sans-serif !important;
   --fontStack-sansSerifDisplay:
-    'Inter-var', 'Inter', --apple-system, system-ui, sans-serif;
+    'Inter-var', 'Inter', --apple-system, system-ui, sans-serif !important;
   --fontStack-system:
-    'Inter-var', 'Inter', --apple-system, system-ui, sans-serif;
+    'Inter-var', 'Inter', --apple-system, system-ui, sans-serif !important;
   --BaseStyles-fontFamily:
-    'Inter-var', 'Inter', --apple-system, system-ui, sans-serif;
+    'Inter-var', 'Inter', --apple-system, system-ui, sans-serif !important;
   --fgColor-default: var(--foreground);
   font-feature-settings:
     'liga' 1,

@@ -71,7 +71,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className='antialiased font-sans'>
+      <body className='antialiased font-sans!'>
         <GoogleAnalytics measurementId='G-P86CEWRLRM' />
         <ThemeProvider>
           <nav className='h-15 border-b border-b-default'></nav>
