@@ -1,0 +1,10 @@
+node_modules
+.output
+.vinxi
+.git
+.gitignore
+*.md
+.env
+.env.*
+Dockerfile
+.dockerignore
