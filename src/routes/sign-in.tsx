@@ -7,11 +7,11 @@ export const Route = createFileRoute('/sign-in')({
 
 function SignIn() {
   return (
-    <div className='grid min-h-dvh bg-default grid-cols-[1fr_2.5rem_minmax(0,var(--container-lg))_2.5rem_1fr] grid-rows-[1fr_auto_1fr] overflow-clip'>
+    <div className='grid min-h-dvh bg-muted grid-cols-[1fr_2.5rem_minmax(0,var(--container-lg))_2.5rem_1fr] grid-rows-[1fr_auto_1fr] overflow-clip'>
       <div className='col-start-2 row-span-full row-start-1 max-sm:hidden border-x border-x-muted bg-size-[10px_10px] bg-fixed bg-[repeating-linear-gradient(315deg,var(--borderColor-muted)_0,var(--borderColor-muted)_1px,transparent_0,transparent_50%)]' />
       <div className='col-start-4 row-span-full row-start-1 max-sm:hidden border-x border-x-muted bg-size-[10px_10px] bg-fixed bg-[repeating-linear-gradient(315deg,var(--borderColor-muted)_0,var(--borderColor-muted)_1px,transparent_0,transparent_50%)]' />
-      <main className='grid grid-cols-1 max-sm:col-span-full max-sm:col-start-1 max-sm:row-span-full max-sm:bg-gray-950/5 max-sm:p-2 sm:line-y sm:col-start-3 sm:row-start-2 sm:-mx-px sm:p-2.25'>
-        <div className='grid grid-cols-1 items-center rounded-xl bg-white max-sm:p-6 sm:p-10'>
+      <main className='grid grid-cols-1 max-sm:col-span-full max-sm:col-start-1 max-sm:row-span-full sm:line-y sm:col-start-3 sm:row-start-2 sm:-mx-px sm:p-2.25'>
+        <div className='grid grid-cols-1 items-center bg-muted max-sm:p-6 sm:p-10'>
           <div className='grid grid-cols-1 gap-10'>
             <div className='flex items-start'>
               <img src='/favicon.svg' className='size-10' />
@@ -24,7 +24,7 @@ function SignIn() {
                   <TextInput
                     type='email'
                     block
-                    className='h-10!'
+                    className='h-9!'
                     placeholder='someone@example.com'
                   />
                 </FormControl>
@@ -34,7 +34,7 @@ function SignIn() {
                       Password
                     </FormControl.Label>
                     <TextInput
-                      className='h-10!'
+                      className='h-9!'
                       type='password'
                       id='password'
                       block
