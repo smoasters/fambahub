@@ -92,7 +92,17 @@ function SignIn() {
                   </div>
 
                   <div className='mt-6 grid grid-cols-2 gap-4'>
-                    <a
+                    <Button
+                      className='h-9!'
+                      onClick={async () => {
+                        await authClient.signIn.social({
+                          provider: 'facebook',
+                        });
+                      }}
+                    >
+                      Facebook
+                    </Button>
+                    {/* <a
                       href='#'
                       className='flex w-full items-center justify-center gap-3 rounded-md bg-[#1D9BF0] px-3 py-1.5 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1D9BF0]'
                     >
@@ -107,7 +117,7 @@ function SignIn() {
                       <span className='text-sm font-semibold leading-6'>
                         Facebook
                       </span>
-                    </a>
+                    </a> */}
 
                     <Button
                       className='h-9!'

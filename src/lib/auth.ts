@@ -16,6 +16,10 @@ export const auth = betterAuth({
       clientId: Bun.env.GOOGLE_CLIENT_ID as string,
       clientSecret: Bun.env.GOOGLE_CLIENT_SECRET as string,
     },
+    facebook: {
+      clientId: Bun.env.FACEBOOK_CLIENT_ID as string,
+      clientSecret: Bun.env.GOOGLE_CLIENT_SECRET as string,
+    },
   },
   emailAndPassword: {
     enabled: true,
