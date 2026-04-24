@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import { z } from 'zod';
 import { Button, FormControl, Spinner, TextInput } from '@primer/react';
@@ -76,7 +74,7 @@ function PasswordReset() {
 
   return (
     <main className='bg-default h-dvh flex items-center justify-center'>
-      <div className='flex flex-col mx-auto max-w-100 p-5 pb-24 gap-12 w-full'>
+      <div className='flex flex-col mx-4 lg:mx-auto lg:max-w-100 lg:p-5 pb-24 gap-12 w-full'>
         <img src='/favicon.svg' className='size-10' />
         <div>
           <h1 className='text-sm/6 font-semibold'>Reset your password</h1>
