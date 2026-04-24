@@ -2,6 +2,7 @@ import { Link, createFileRoute } from '@tanstack/react-router';
 import { Button, FormControl, TextInput } from '@primer/react';
 import { Icons } from '@/components/icons';
 import { metadata } from '@/lib/metadata';
+import { authClient } from '@/lib/auth-client';
 
 export const Route = createFileRoute('/sign-in')({
   component: SignIn,
@@ -108,7 +109,15 @@ function SignIn() {
                       </span>
                     </a>
 
-                    <Button className='h-9!' leadingVisual={Icons.google}>
+                    <Button
+                      className='h-9!'
+                      onClick={async () => {
+                        await authClient.signIn.social({
+                          provider: 'google',
+                        });
+                      }}
+                      leadingVisual={Icons.google}
+                    >
                       Google
                     </Button>
                   </div>
