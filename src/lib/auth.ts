@@ -1,9 +1,10 @@
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { tanstackStartCookies } from 'better-auth/tanstack-start';
+import { magicLink } from 'better-auth/plugins';
 import db from '@/db/drizzle';
 import * as schema from '@/db/schema';
-import { sendEmail } from '@/emails';
+import { sendEmail, sendMagicLinkEmail } from '@/components/emails';
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -30,7 +31,7 @@ export const auth = betterAuth({
       void sendEmail({
         to: user.email,
         subject: 'Reset your password',
-        html: `<p>Click <a href="${url}">here</a> to reset your password. Link expires in 1 hour.</p>`,
+        react: `<p>Click <a href="${url}">here</a> to reset your password. Link expires in 1 hour.</p>`,
       });
     },
     // eslint-disable-next-line @typescript-eslint/require-await
@@ -40,5 +41,13 @@ export const auth = betterAuth({
       console.log(`Password for user ${user.email} has been reset.`);
     },
   },
-  plugins: [tanstackStartCookies()],
+  plugins: [
+    magicLink({
+      sendMagicLink: async ({ email, token, url, metadata }, ctx) => {
+        console.log(`token=${token},metadata=${metadata}, ctx=${ctx} `);
+        await sendMagicLinkEmail(email, url);
+      },
+    }),
+    tanstackStartCookies(),
+  ],
 });
